@@ -1,1 +1,37 @@
-<p>toolbar works!</p>
+<mat-toolbar color="primary" class="toolbar" *ngIf="isAuthenticated">
+  <!-- nav button -->
+  <span>
+      <button
+        mat-mini-fab
+        color="accent"
+        (click)="sidenavToggled.emit()"
+        *ngIf="isAuthenticated">
+          <mat-icon>menu</mat-icon>
+      </button>
+  </span>
+  <!-- title -->
+  <span class="title">{{title}}</span>
+  <!-- spacer -->
+  <span class="spacer"></span>
+  <!-- sub-logo -->
+  <p class="header">User Info</p>
+  <button
+    mat-mini-fab
+    color="accent">
+    <mat-icon>face</mat-icon>
+  </button>
+  <!-- subtitle content -->
+  <p class="header">Logout</p>
+  <!-- sub-logo + LOGIN -->
+  <button
+    *ngIf="isAuthenticated"
+    (click)="loggedOut.emit()"
+    class="login"
+    style="color: whitesmoke;"
+    mat-mini-fab
+  >
+
+    <mat-icon>person</mat-icon>
+  </button>
+
+</mat-toolbar>

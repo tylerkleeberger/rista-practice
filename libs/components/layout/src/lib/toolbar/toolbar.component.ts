@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import {ChangeDetectionStrategy, Component, EventEmitter, Input, Output} from '@angular/core';
 
 @Component({
   selector: 'rista-toolbar',
@@ -6,4 +6,12 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   styleUrls: ['./toolbar.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ToolbarComponent {}
+export class ToolbarComponent {
+  @Input() isAuthenticated!: boolean;
+  @Input() title!: string;
+
+  @Output() loggedOut = new EventEmitter();
+  @Output() sidenavToggled = new EventEmitter();
+
+
+}
