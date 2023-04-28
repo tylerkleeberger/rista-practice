@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "~rista/components/layout": ["libs/components/layout/src/index.ts"],
       "~rista/pages/layout": ["libs/pages/layout/src/index.ts"]
     }
   },
