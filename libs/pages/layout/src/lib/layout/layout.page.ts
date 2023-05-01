@@ -9,6 +9,13 @@ import {logout, toggleSidenav} from '~rista/components/layout';
 })
 export class LayoutPage {
 
+  links = [
+    { path: '/home', icon: 'home', title: 'Home' },
+    { path: '/items', icon: 'view_list', title: 'Items' },
+    { path: '/', icon: 'person', title: 'Login' },
+    { path: '/sign-up', icon: 'person_add', title: 'Sign Up' },
+  ];
+
   constructor(
     private readonly store: Store,
   ) {}
