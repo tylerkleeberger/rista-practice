@@ -1,4 +1,6 @@
 <rista-toolbar
-  [isAuthenticated]="true"
+  [isAuthenticated]="isAuthenticated$ | push"
   title="Rista"
+  (sidenavToggled)="toggledSidenav()"
+  (loggedOut)="loggedOut()"
 ></rista-toolbar>
